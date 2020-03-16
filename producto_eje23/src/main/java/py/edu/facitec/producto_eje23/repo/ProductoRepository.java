@@ -11,4 +11,5 @@ import py.edu.facitec.producto_eje23.entity.Producto;
 public interface ProductoRepository extends JpaRepository<Producto, Long> {
 
 	List<Producto> findByNombre(String producto);
+
 }
