@@ -12,8 +12,8 @@ import javax.persistence.Table;
 public class Producto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID")
-	private Long id;
+	@Column(name = "ID_PRODUCTO")
+	private Long idProducto;
 
 	@Column(name = "DESCRIPCION")
 	private String descripcion;
@@ -21,15 +21,12 @@ public class Producto {
 	@Column(name = "PRECIO")
 	private double precio;
 
-	public Producto() {
-	}
-
 	public Long getId() {
-		return id;
+		return idProducto;
 	}
 
 	public void setId(Long id) {
-		this.id = id;
+		this.idProducto = id;
 	}
 
 	public String getDescripcion() {
@@ -50,7 +47,7 @@ public class Producto {
 
 	@Override
 	public String toString() {
-		return "Producto [id=" + id + ", descripcion=" + descripcion + ", precio=" + precio + "]";
+		return "Producto [id=" + idProducto + ", descripcion=" + descripcion + ", precio=" + precio + "]";
 	}
 
 }
